@@ -1,0 +1,17 @@
+.body{
+    margin: 0;
+}
+header{
+    background-color: aliceblue;
+    opacity: .7;
+    padding: 1rem;
+    margin: 0;
+    width: 100%;
+    box-sizing: border-box;
+    font-size: xx-large;
+}
+section{
+    margin-top: 50px;
+    padding: 5px 15px;
+    height: 150vh;
+}
