@@ -6,4 +6,19 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 
 @Controller
+public class BlogController {
+
+    @GetMapping("/blogs")
+    public String blogs() {
+        return "blogs";
+    }
+
+    @GetMapping("/blogs/new")
+    public String newblogs() {
+        return "blogs/new";
+    }
+    
+    
+}
+
 

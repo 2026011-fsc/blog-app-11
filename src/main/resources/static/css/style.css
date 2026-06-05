@@ -1,17 +1,18 @@
-.body{
-    margin: 0;
-}
-header{
-    background-color: aliceblue;
-    opacity: .7;
-    padding: 1rem;
-    margin: 0;
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
-    box-sizing: border-box;
-    font-size: xx-large;
+    height: 60px;
+    background-color: aliceblue;
+    color: black;
+    z-index: 9999; /* 追加：大きな数値を指定 */
 }
-section{
-    margin-top: 50px;
-    padding: 5px 15px;
-    height: 150vh;
+.no-break {
+  white-space: nowrap;
+}
+
+
+.content {
+    margin-top: 60px;
 }

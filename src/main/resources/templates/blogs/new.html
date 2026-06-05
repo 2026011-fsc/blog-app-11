@@ -6,6 +6,14 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <h1>投稿</h1><br>
+    <form action="/blogs" method="post">
+        <input type="text" name="title" value="" placeholder="記事タイトル" style="width: 408px;"><br>
+        <p> </p>
+        <textarea placeholder="本文" name="note" style="width: 408px; height: 70px;"></textarea>
+        <br>
+        <button type="submit">投稿</button>
+        <a href="/blogs">キャンセル</a>
+    </form>
 </body>
 </html>
