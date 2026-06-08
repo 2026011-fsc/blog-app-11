@@ -1,12 +1,47 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="ja" xmlns:th="http://www.thymeleaf.org">
+<link rel="stylesheet" href="/css/style.css">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ditail</title>
 </head>
+
 <body>
-    <p><h1>ポラーノの広場</h1></p>
-    <p><h3>あのイーハートーヴォのすきとおった風、、、</h3></p>
+
+    <aside class="sidebar">
+        <h2>Menu</h2>
+        <ul>
+            <li><a href="/">ホーム</a></li>
+            <li><a href="/profile">プロフィール</a></li>
+        </ul>
+    </aside>
+
+    <header class="header">
+        <div class="logo">
+            <h1>Spring</h1>
+        </div>
+
+        <div class="search-area">
+            <input type="search" placeholder="キーワード検索">
+        </div>
+
+        <div class="post-area">
+            <a href="/blogs/new" class="post-btn">投稿</a>
+        </div>
+    </header>
+
+    <main class="content">
+
+        <h1 th:text="${blog.title}"></h1>
+
+        <p th:text="${blog.content}"></p>
+
+    </main>
+
 </body>
+
+</html>
+
 </html>
