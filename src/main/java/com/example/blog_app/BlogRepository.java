@@ -54,7 +54,7 @@ public class BlogRepository {
                     return new Blog(
                         rs.getLong("id"),
                         rs.getString("title"),
-                        rs.getString("notes") // ★ notes列から取得
+                        rs.getString("notes")
                     );
                 }
             }

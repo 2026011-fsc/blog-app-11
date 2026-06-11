@@ -10,27 +10,9 @@
 
 <body>
 
-    <aside class="sidebar">
-        <h2>Menu</h2>
-        <ul>
-            <li><a href="/">ホーム</a></li>
-            <li><a href="/profile">プロフィール</a></li>
-        </ul>
-    </aside>
+    <aside class="sidebar" th:replace="'blog'::sidebar"></aside>
 
-    <header class="header">
-        <div class="logo">
-            <h1>Spring</h1>
-        </div>
-
-        <div class="search-area">
-            <input type="search" placeholder="キーワード検索">
-        </div>
-
-        <div class="post-area">
-            <a href="/blogs/new" class="post-btn">投稿</a>
-        </div>
-    </header>
+        <header class="header" th:replace="'blog'::header"></header>
 
     <main class="content">
 
