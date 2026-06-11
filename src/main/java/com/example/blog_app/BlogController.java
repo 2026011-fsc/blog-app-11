@@ -16,7 +16,7 @@ public class BlogController {
     @GetMapping("/")
     public String blog(Model model) {
 
-        model.addAttribute("blogs",blogService.findAll());
+        model.addAttribute("blogs", blogService.findAll());
 
         return "blog";
     }
@@ -26,7 +26,7 @@ public class BlogController {
             @PathVariable Long id,
             Model model) {
 
-        model.addAttribute("blog",blogService.findById(id));
+        model.addAttribute("blog", blogService.findById(id));
 
         return "blogs/detail";
     }

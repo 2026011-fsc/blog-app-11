@@ -1,6 +1,5 @@
 package com.example.blog_app;
 
-
 import java.util.List;
 import org.springframework.stereotype.Service;
 
@@ -9,11 +8,11 @@ public class BlogService {
 
     private final BlogRepository blogRepository;
 
-    public BlogService(BlogRepository blogRepository){
+    public BlogService(BlogRepository blogRepository) {
         this.blogRepository = blogRepository;
     }
 
-    public List<Blog> findAll(){
+    public List<Blog> findAll() {
         return blogRepository.findAll();
     }
 
@@ -25,7 +24,7 @@ public class BlogService {
         if (title == null || title.isEmpty()) {
             throw new IllegalArgumentException("タイトルが空です");
         }
-        
+
         Blog blog = new Blog(null, title, content);
         blogRepository.save(blog);
     }

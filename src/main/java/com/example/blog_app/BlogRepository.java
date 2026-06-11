@@ -1,6 +1,5 @@
 package com.example.blog_app;
 
-
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -25,14 +24,14 @@ public class BlogRepository {
         String sql = "SELECT id, title, notes FROM blogs";
 
         try (Connection conn = dataSource.getConnection();
-             PreparedStatement stmt = conn.prepareStatement(sql);
-             ResultSet rs = stmt.executeQuery()) {
+                PreparedStatement stmt = conn.prepareStatement(sql);
+                ResultSet rs = stmt.executeQuery()) {
 
             while (rs.next()) {
                 Long id = rs.getLong("id");
                 String title = rs.getString("title");
-                String content = rs.getString("notes"); 
-                
+                String content = rs.getString("notes");
+
                 blogs.add(new Blog(id, title, content));
             }
         } catch (SQLException e) {
@@ -46,16 +45,15 @@ public class BlogRepository {
         String sql = "SELECT id, title, notes FROM blogs WHERE id = ?";
 
         try (Connection conn = dataSource.getConnection();
-             PreparedStatement stmt = conn.prepareStatement(sql)) {
-            
+                PreparedStatement stmt = conn.prepareStatement(sql)) {
+
             stmt.setLong(1, id);
             try (ResultSet rs = stmt.executeQuery()) {
                 if (rs.next()) {
                     return new Blog(
-                        rs.getLong("id"),
-                        rs.getString("title"),
-                        rs.getString("notes")
-                    );
+                            rs.getLong("id"),
+                            rs.getString("title"),
+                            rs.getString("notes"));
                 }
             }
         } catch (SQLException e) {
@@ -69,12 +67,12 @@ public class BlogRepository {
         String sql = "INSERT INTO blogs (title, notes) VALUES (?, ?)";
 
         try (Connection conn = dataSource.getConnection();
-             PreparedStatement stmt = conn.prepareStatement(sql)) {
+                PreparedStatement stmt = conn.prepareStatement(sql)) {
 
             stmt.setString(1, blog.getTitle());
             stmt.setString(2, blog.getContent());
             stmt.executeUpdate();
-            
+
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }

@@ -12,7 +12,7 @@
 
     <aside class="sidebar" th:replace="'blog'::sidebar"></aside>
 
-        <header class="header" th:replace="'blog'::header"></header>
+    <header class="header" th:replace="'blog'::header"></header>
     <main class="content">
 
         <div class="form-container">
@@ -20,11 +20,11 @@
 
             <form action="/blogs" method="post">
 
-                <input type="text" name="title"  placeholder="記事タイトル" size="50">
+                <input type="text" name="title" placeholder="記事タイトル" size="50">
 
                 <br><br>
 
-                <textarea name="content" rows="10" cols="100" placeholder="本文" ></textarea>
+                <textarea name="content" rows="10" cols="100" placeholder="本文"></textarea>
 
                 <br><br>
 
